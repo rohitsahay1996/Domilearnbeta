@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rohitsahay.domilearn.AuthActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/rl3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Signup"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/textView" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl3">
+<ImageView
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@mipmap/person"
+    android:layout_marginLeft="5dp"
+    android:layout_above="@+id/rl1"
+    android:layout_alignStart="@+id/rl1"
+    android:layout_marginBottom="14dp"
+    android:id="@+id/imageView3" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:focusable="true"
+            android:nextFocusDown="@+id/number"
+            android:hint="Enter your name..."
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_marginStart="26dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification code will be send to your phone number"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:layout_above="@+id/verifybtn"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="35dp"
+            android:id="@+id/textView3" />
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/rl2"
+            android:layout_alignStart="@+id/rl2"
+            android:layout_marginBottom="11dp">
+
+            <ProgressBar
+                android:id="@+id/phonebar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@+id/number"
+                android:layout_toEndOf="@+id/number"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/phone_icon"
+                android:id="@+id/imageView1" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:hint="Phone Number..."
+                android:maxLength="10"
+                android:inputType="number"
+
+                android:nextFocusDown="@+id/code"
+
+                android:layout_margin="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView1"
+                android:layout_marginStart="0dp"
+                android:id="@+id/number" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/textView3"
+            android:layout_marginBottom="36dp"
+            android:layout_alignParentStart="true">
+
+            <ProgressBar
+                android:id="@+id/codebar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@+id/code"
+                android:layout_toEndOf="@+id/code"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:src="@mipmap/lock_icon" />
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/imageView2"
+                android:hint="Verification code..."
+                android:inputType="number" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:background="@color/colorAccent"
+            android:text="Verify"
+            android:textColor="#fff"
+            android:id="@+id/verifybtn"
+            android:layout_marginBottom="27dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/errortext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="94dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
